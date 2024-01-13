@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon</title>
+</head>
+<body>
+    <center>
+        <h1>Javascript program to get the maximum count of consecutive 1's in a given array</h1>
+    </center>
+    <hr>
+
+    <script>
+        function getMaxLength(arr, n) {
+	    let count = 0;
+	    let result = 0;
+
+	    for (let i = 0; i < n; i++) {
+		
+		if (arr[i] == 0)
+			count = 0;
+
+		else {
+			count++;
+			result = Math.max(result, count);
+		}
+	}
+
+	return result;
+}
+    let arr = new Array(0,1, 1, 0, 0, 1, 1,1, 1, 0, 1, 0, 1);
+    let n = arr.length;
+    document.write(`<h1> The maximum count of consecutive 1's is : ${getMaxLength(arr, n)}</h1>`);
+</script>
+</body>
+</html>

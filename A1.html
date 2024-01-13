@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon</title>
+</head>
+<body>
+    <center>
+        <h1>Javascript Program to segregate the 0's and 1's in a given array?</h1>
+    </center>
+    <hr>
+
+    <script>
+	function segregate0and1(arr, n) 
+{ 
+	let count = 0; // Counts the no of zeros in arr 
+
+	for (let i = 0; i < n; i++) { 
+		if (arr[i] == 0) 
+			count++; 
+	} 
+
+	for (let i = 0; i < count; i++) 
+		arr[i] = 0; 
+
+	
+	for (let i = count; i < n; i++) 
+		arr[i] = 1; 
+} 
+function print(arr, n) 
+{ 
+	document.write("<h2>Array after segregation is </h2>"); 
+
+	for (let i = 0; i < n; i++) 
+		document.write(arr[i] + " "); 
+} 
+	let arr = [ 0, 1,1, 0, 1, 0, 1, 0, 0,1, 0, 1 ]; 
+	let n = arr.length; 
+	
+	segregate0and1(arr, n); 
+	print(arr, n); 
+    </script>
+</body>
+</html>

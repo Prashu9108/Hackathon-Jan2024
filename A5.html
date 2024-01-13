@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon</title>
+</head>
+<body>
+    <center>
+        <h1>Javascript program to check repeated characters in given string or not</h1>
+    </center>
+    <hr>
+
+    <script>
+        const inputStr = prompt('Enter a word: ');
+        
+        const sortedStr = inputStr.split('').sort().join(''); 
+
+        let duplicates = []; 
+        let prevChar = sortedStr[0]; 
+
+        for (const char of sortedStr.slice(1)) { 
+	    if (char === prevChar 
+		&& !duplicates.includes(char)) { 
+		duplicates.push(char); 
+	} 
+	prevChar = char; 
+} 
+
+if (duplicates.length > 0) { 
+	document.write(`<h1>The duplicate characters : ${duplicates.join(', ')}</h1>`); 
+} else { 
+	document.write(`<h1>The string "${inputStr}" has no duplicate characters.</h1>`); 
+};
+    </script>
+
+</body>
+</html>

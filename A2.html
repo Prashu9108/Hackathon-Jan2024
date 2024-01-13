@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon</title>
+</head>
+<body>
+    <center>
+        <h1>Javascript Proram to check the given string is Palindrome or not?</h1>
+    </center>
+    <hr>
+
+    <script>
+        function checkPalindrome(string) {
+
+        
+        const len = string.length;
+
+
+        for (let i = 0; i < len / 2; i++) {
+
+    
+        if (string[i] !== string[len - 1 - i]) {
+        return 'Entered word is not a palindrome';
+        }
+    }
+        return 'Entered word is a palindrome';
+    }
+
+
+        const string = prompt('Enter a string: ');
+
+
+        const value = checkPalindrome(string);
+
+        document.write(`<h1> RESULT : ${value}</h1>`);
+    </script>
+</body>
+</html>
